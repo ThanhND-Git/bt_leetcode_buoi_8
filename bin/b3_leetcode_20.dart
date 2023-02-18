@@ -18,11 +18,11 @@ bool isValid(String s) {
       if (tempStack.isEmpty) {
         return false;
       }
-      String firstString = tempStack.first;
+      String lastString = tempStack.last;
       // kiểm tra các ký tự nếu đáp ứng điều kiện thì xóa ký tự có trong list đi
-      if (firstString == '(' && s[i] == ')' ||
-          firstString == '[' && s[i] == ']' ||
-          firstString == '{' && s[i] == '}') {
+      if (lastString == '(' && s[i] == ')' ||
+          lastString == '[' && s[i] == ']' ||
+          lastString == '{' && s[i] == '}') {
         tempStack.removeLast();
       } else {
         break;
